@@ -1,0 +1,109 @@
+* {
+	box-sizing: border-box;
+}
+html,
+body {
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+	overflow: hidden;
+}
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #000;
+	color: #fff;
+	font-size: 1.25em;
+	font-family: sans-serif;
+	image-rendering: pixelated;
+}
+#viewport,
+#canvas,
+#bg-canvas,
+#overlay {
+	width: 100vw;
+	height: 100vh;
+}
+#viewport {
+	position: absolute;
+	overflow: hidden;
+	outline: 1px solid #048;
+	cursor: none;
+}
+#viewport > * {
+	position: absolute;
+}
+canvas {
+	text-align: center;
+}
+
+#overlay {
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+	font: 2em serif;
+	border: 0 solid #000;
+	opacity: 0;
+	color: #000;
+	transition: opacity 1s, border-width 1s, box-shadow 1s, color 0.5s 1s;
+}
+#overlay.full {
+	padding: 20vh 20vw;
+	background: #000;
+	opacity: 1;
+	color: #fff;
+	cursor: default;
+}
+#overlay.shown {
+	border-width: calc(50vh - 35vmin) calc(50vw - 35vmin);
+	box-shadow: inset 0 0 5vmin 5vmin #000;
+	opacity: 1;
+}
+
+#writing {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	padding: 40vh 0 25vh;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	border: 1px solid #000;
+	background: center 35vh / auto 45vh no-repeat url('assets/writing.png'), #0008;
+	text-align: center;
+	color: #000;
+	cursor: default;
+}
+#writing[hidden] {
+	display: none;
+}
+#writing-heading {
+	font-weight: bold;
+	text-decoration: underline;
+}
+#writing-message {
+	font-size: 2em;
+}
+#writing-button {
+	width: auto;
+	margin: 0 auto;
+	padding: 0;
+	border: none;
+	outline: none;
+	background: none;
+	color: #440;
+	font: inherit;
+	text-decoration: underline;
+	cursor: pointer;
+}
+#writing-button:hover {
+	color: #660;
+}
+#writing-button:focus {
+	color: #880;
+}

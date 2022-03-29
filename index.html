@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, user-scalable=no"
+		/>
+		<title>Pathways</title>
+		<link rel="shortcut icon" href="icon.png" />
+		<link rel="stylesheet" href="puzzle.css" />
+	</head>
+	<body>
+		<div id="viewport">
+			<canvas id="bg-canvas"></canvas>
+			<canvas id="canvas"
+				>The &lt;canvas&gt; element is not supported by your browser,
+				sorry.</canvas
+			>
+			<div id="overlay" class="shown"></div>
+			<div id="writing" hidden>
+				<div id="writing-heading"></div>
+				<div id="writing-message"></div>
+				<button id="writing-button">Press here to continue &#8594;</button>
+			</div>
+		</div>
+		<script src="puzzle.js" type="module"></script>
+	</body>
+</html>
